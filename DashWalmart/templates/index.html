@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+
+<div class="container">
+    <div class="row mt-4">
+        <div class="col-md-4">
+            <div class="card shadow">
+                <div class="card body">
+                    <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <input type="submit" class="btn btn-primary">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card body">
+                    <div class="text-center">
+                    <h2>Attribute details</h2>
+                   <p><h5>Temp:</h5>Atmospheric temperature<br></p>
+                    <p><h5>Fuel:</h5>Fuel price<br></p>
+                    <p><h5>Cpi:</h5>Customer price index<br></p>
+                    <p><h5>Unemp:</h5>Unemployment rate<br></p>
+                   <p> <h5>Ishol:</h5>Enter 0 if not a holiday<br></p>
+                    Enter 1 if holiday
+                    <p><h5>Store:</h5>Store number<br></p>
+                    <p><h5>Dept:</h5>Department number<br></p>
+                    <p><h5>Typ:</h5>Type of store[0,1 or 2]<br></p>
+                    <p><h5>Size:</h5>Size of store<br></p>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+

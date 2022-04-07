@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block body %}
+
+  <table class="table table-striped">
+  <thead>
+    <tr>
+
+      <th scope="col">Temperature</th>
+      <th scope="col">Fuel</th>
+      <th scope="col">CPI</th>
+        <th scope="col">Unemployment</th>
+        <th scope="col">Week</th>
+        <th scope="col">Holiday</th>
+        <th scope="col">Stor No:</th>
+        <th scope="col">Department No:</th>
+        <th scope="col">Type</th>
+        <th scope="col">Size</th>
+        <th scope="col">Predicted weekly sales</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for i in prediction %}
+    <tr>
+
+        <td>{{i.temp}}</td>
+        <td>{{i.fuel}}</td>
+        <td>{{i.cpi}}</td>
+        <td>{{i.unemp}}</td>
+        <td>{{i.week}}</td>
+        <td>{{i.ishol}}</td>
+        <td>{{i.store}}</td>
+        <td>{{i.dept}}</td>
+        <td>{{i.typ}}</td>
+        <td>{{i.size}}</td>
+      <td><b><h5>{{i.pred}}</h5></b></td>
+
+
+    </tr>
+  {% endfor %}
+
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
